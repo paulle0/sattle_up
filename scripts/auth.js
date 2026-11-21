@@ -26,18 +26,17 @@ function renderNpubLabel() {
   const label = document.getElementById("npub-label");
   if (!label) return;
   const nsec = getSavedNsec();
-  let text = "No npub logged in";
+  let npub = null;
   if (nsec) {
     try {
-      const npub = nsecToNpub(nsec);
-      text = shortenNpub(npub);
-      label.title = npub;
+      npub = nsecToNpub(nsec);
     } catch (e) {
       // Stored value is invalid: treat as logged out.
     }
   }
-  label.textContent = text;
-  label.classList.toggle("logged-in", text !== "No npub logged in");
+  label.textContent = "Logged in: " + (npub ? shortenNpub(npub) : "No npub logged in");
+  label.title = npub || "";
+  label.classList.toggle("logged-in", Boolean(npub));
 }
 
 document.addEventListener("DOMContentLoaded", renderNpubLabel);
