@@ -148,8 +148,13 @@ body {
 }
 
 .hint {
+  margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.hint a {
+  color: var(--accent);
 }
 
 .login-form input[type="password"],

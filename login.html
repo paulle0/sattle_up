@@ -23,8 +23,11 @@
     <section class="card" aria-labelledby="login-title">
       <h2 id="login-title">Log In</h2>
       <form id="login-form" class="login-form">
-        <label for="nsec-input" class="hint">Save the nsec in a password manager to reuse.</label>
-        <input id="nsec-input" name="nsec" type="password" placeholder="nsec1..."
+        <p class="hint">
+          Save the nsec in a password manager to reuse.<br>
+          Create nsec e.g. here <a href="https://nak.nostr.com/" target="_blank" rel="noopener noreferrer">https://nak.nostr.com/</a>
+        </p>
+        <input id="nsec-input" name="nsec" type="password" placeholder="nsec1..." aria-label="nsec"
                autocomplete="current-password" spellcheck="false" required>
         <label class="show-toggle"><input id="show-nsec" type="checkbox"> Show nsec</label>
         <div class="form-actions">
