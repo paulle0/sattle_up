@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In – Sattle Up</title>
+  <link rel="icon" type="image/svg+xml" href="resources/images/napttr_logo.svg">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="vendor/nostr-tools/nostr.bundle.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/login.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="resources/images/napttr_logo.svg" alt="Sattle Up logo">
+      <span class="brand-name">Sattle Up</span>
+    </a>
+    <span id="npub-label" class="npub-label">Logged in: No npub logged in</span>
+  </header>
+
+  <main class="content">
+    <section class="card" aria-labelledby="login-title">
+      <h2 id="login-title">Log In</h2>
+      <form id="login-form" class="login-form">
+        <p class="hint">
+          Save the nsec in a password manager to reuse.<br>
+          Create nsec e.g. here <a href="https://nak.nostr.com/" target="_blank" rel="noopener noreferrer">https://nak.nostr.com/</a>
+        </p>
+        <input id="nsec-input" name="nsec" type="password" placeholder="nsec1..." aria-label="nsec"
+               autocomplete="current-password" spellcheck="false" required>
+        <label class="show-toggle"><input id="show-nsec" type="checkbox"> Show nsec</label>
+        <div class="form-actions">
+          <button type="submit" class="button">Save</button>
+          <a href="index.html" class="link">Back to start page</a>
+        </div>
+        <p id="login-message" class="message" role="status"></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
