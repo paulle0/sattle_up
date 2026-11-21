@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sattle Up</title>
+  <link rel="icon" type="image/svg+xml" href="resources/images/napttr_logo.svg">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="resources/images/napttr_logo.svg" alt="Sattle Up logo">
+      <span class="brand-name">Sattle Up</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="login.html">Log In</a>
+      <a href="create-group.html">Create new Group</a>
+      <a href="join-group.html">Join Group</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="groups" aria-labelledby="groups-title">
+      <h2 id="groups-title">My Groups</h2>
+      <!-- Groups will be inserted as <li> elements here later. Keep the <ul> otherwise empty so the empty-state text shows. -->
+      <ul id="group-list" class="group-list"></ul>
+      <p class="empty-state">You are not part of any group yet.</p>
+    </section>
+  </main>
+</body>
+</html>
