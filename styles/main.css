@@ -34,6 +34,7 @@ body {
 }
 
 .brand {
+  margin-right: auto;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -81,14 +82,14 @@ body {
   padding: 0 1rem;
 }
 
-.groups {
+.card {
   padding: 1.5rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
 
-.groups h2 {
+.card h2 {
   margin-top: 0;
   color: var(--accent);
 }
@@ -121,4 +122,87 @@ body {
 
 .group-list:empty {
   display: none;
+}
+
+/* Logged-in npub label in the header */
+.npub-label {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--muted);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+.npub-label.logged-in {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+}
+
+/* Login form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 480px;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.login-form input[type="password"],
+.login-form input[type="text"] {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font: inherit;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+
+.login-form input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.show-toggle {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--accent-dark);
+}
+
+.link {
+  color: var(--accent);
+}
+
+.message {
+  margin: 0;
+  min-height: 1.2em;
+  color: var(--accent-dark);
+}
+
+.message.error {
+  color: #b91c1c;
 }

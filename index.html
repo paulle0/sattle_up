@@ -6,6 +6,8 @@
   <title>Sattle Up</title>
   <link rel="icon" type="image/svg+xml" href="resources/images/napttr_logo.svg">
   <link rel="stylesheet" href="styles/main.css">
+  <script src="vendor/nostr-tools/nostr.bundle.js"></script>
+  <script src="scripts/auth.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -13,6 +15,7 @@
       <img class="brand-logo" src="resources/images/napttr_logo.svg" alt="Sattle Up logo">
       <span class="brand-name">Sattle Up</span>
     </a>
+    <span id="npub-label" class="npub-label">No npub logged in</span>
     <nav class="main-nav" aria-label="Main">
       <a href="login.html">Log In</a>
       <a href="create-group.html">Create new Group</a>
@@ -21,7 +24,7 @@
   </header>
 
   <main class="content">
-    <section class="groups" aria-labelledby="groups-title">
+    <section class="card" aria-labelledby="groups-title">
       <h2 id="groups-title">My Groups</h2>
       <!-- Groups will be inserted as <li> elements here later. Keep the <ul> otherwise empty so the empty-state text shows. -->
       <ul id="group-list" class="group-list"></ul>
