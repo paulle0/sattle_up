@@ -2,8 +2,18 @@
 
 Static web front end for **Sattle Up**.
 
-Open `index.html` directly in a browser, or serve the folder with any static web server
-(e.g. `python3 -m http.server`). All paths are relative, so both work.
+Open `index.html` directly in a browser, or serve the folder with any static web server.
+All paths are relative, so both work.
+
+## Run locally
+
+From the repository folder, start a local web server:
+
+```
+python3 -m http.server
+```
+
+Then open http://localhost:8000 in your browser. Stop the server with `Ctrl+C`.
 
 ## Structure
 
